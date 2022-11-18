@@ -1,0 +1,20 @@
+server:
+  port: 8888
+  servlet:
+    context-path: "/index"
+spring:
+  banner:
+    image:
+      location: classpath:templates/imgs/img.png
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_demo?serverTimezone=UTC
+    password: root
+    username: root
+mybatis:
+  mapper-locations: classpath:Mapper/*.xml
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: countSql
